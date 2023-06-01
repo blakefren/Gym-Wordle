@@ -222,7 +222,7 @@ class WordleEnv(gym.Env):
             mode: the mode to render with
         """
         if mode == 'human':
-            for row in self.states:
+            for row in self.state:
                 text = ''.join(map(
                     self._highlighter, 
                     to_english(row[:self.n_letters]).upper(), 
